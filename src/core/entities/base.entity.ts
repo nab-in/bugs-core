@@ -1,11 +1,15 @@
+import { User } from '../../modules/user/entities/user.entity';
 import {
   PrimaryGeneratedColumn,
   Column,
   UpdateDateColumn,
   CreateDateColumn,
+  BaseEntity,
+  JoinColumn,
+  OneToOne,
 } from 'typeorm';
 
-export abstract class BaseEntity {
+export abstract class CoreEntity extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -21,13 +25,14 @@ export abstract class BaseEntity {
   @CreateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
   created: Date;
 
-  @Column({ type: 'integer', length: 25 })
-  createdby: number;
+  @OneToOne(() => User, { onUpdate: 'CASCADE', eager: true })
+  @JoinColumn({ referencedColumnName: 'id', name: 'createdby' })
+  createdby: User;
 
   @UpdateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
   lastupdated: Date;
 
-  @Column({ type: 'integer', length: 25 })
-  lastupdatedby: number;
-
+  @OneToOne(() => User, { onUpdate: 'CASCADE', eager: true })
+  @JoinColumn({ referencedColumnName: 'id', name: 'lastupdatedby' })
+  lastupdatedby: User;
 }
