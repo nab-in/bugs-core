@@ -10,13 +10,16 @@ import {
 import { CoreEntity } from '../../../core/entities/base.entity';
 import { Comments } from './comments.entity';
 import { Reactions } from './reactions.entity';
-import { BugStatus } from '../constants/bugs-status.enum';
+import { BugStatus, BugType } from '../constants/bugs-constants.enum';
 import { User } from '../../user/entities/user.entity';
 
 @Entity('bugs', { schema: 'public' })
 export abstract class Bugs extends CoreEntity {
   @Column({ type: 'varchar', length: 256 })
   name: string;
+
+  @Column({ type: 'varchar', length: 256 })
+  type: BugType;
 
   @Column({ type: 'varchar' })
   status: BugStatus;

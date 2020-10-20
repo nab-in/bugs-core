@@ -5,3 +5,8 @@ export enum BugStatus {
   TESTING = 'TESTING',
   ACCEPTED = 'ACCEPTED',
 }
+
+export enum BugType {
+  DEVELOPMENT = 'DEV',
+  ANALYSIS = 'ANALYSIS/CONFIG'
+}
