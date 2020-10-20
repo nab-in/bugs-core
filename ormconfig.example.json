@@ -1,0 +1,23 @@
+[
+    {
+        "name": "<CONNECTION NAME>",
+        "type": "postgres",
+        "host": "<DB ADDRESS>",
+        "port": 5432,
+        "username": "<DB PASSWORD>",
+        "password": "<DB PASSWORD>",
+        "database": "<DB NAME>",
+        "synchronize": true,
+        "logging": false,
+        "dropSchema": true,
+        "entities": ["src/modules/**/*.entity.ts"],
+        "migrations": ["src/database/migration/**/*.ts"],
+        "subscribers": ["src/subscriber/**/*.ts"],
+        "cli": {
+          "entitiesDir": "src/modules/**/entities/*.entity.ts",
+          "migrationsDir": "src/database/migration",
+          "subscribersDir": "src/subscriber"
+        }
+      }
+  ]
+  
