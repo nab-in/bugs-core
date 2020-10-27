@@ -1,5 +1,5 @@
 ## Description
-Review and Kill bugs in realtime with coworkers
+Review and kill bugs in realtime with coworkers
 ## Installation
 
 ```bash
