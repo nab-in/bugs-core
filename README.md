@@ -1,5 +1,5 @@
 ## Description
-Review and kill bugs in realtime with coworkers
+Api endpoints: Review and kill bugs in realtime with coworkers
 ## Installation
 
 ```bash
