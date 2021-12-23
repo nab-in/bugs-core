@@ -26,13 +26,13 @@
     "@nestjs/platform-express": "^7.6.18",
     "@nestjs/swagger": "4.8.0",
     "@nestjs/typeorm": "7.1.5",
-    "class-validator": "0.13.1",
+    "class-validator": "0.13.2",
     "dotenv": "10.0.0",
     "pg": "8.7.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.7",
-    "swagger-ui-express": "4.1.6",
+    "swagger-ui-express": "4.3.0",
     "typeorm": "0.2.41"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
     "ts-loader": "^9.2.6",
     "ts-jest": "26.5.6",
     "ts-node": "10.4.0",
-    "tsconfig-paths": "^3.11.0",
+    "tsconfig-paths": "^3.12.0",
     "typescript": "^4.4.4"
   },
   "jest": {
